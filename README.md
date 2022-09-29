@@ -1,5 +1,5 @@
 # TermDepositCalculator-React
-A term deposit calculator built using React.
+A term deposit calculator built using React v18.2.0.
 
 The following application is a term deposit calculator.
 It takes in the following inputs:
@@ -39,3 +39,6 @@ npm test
 - /utils - utility files such as enums and functions
 - /tests - unit tests for calculator functions
 
+
+Taylah Lucas
+29th September 2022
