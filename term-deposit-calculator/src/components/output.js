@@ -4,6 +4,7 @@ import { NumericFormat } from 'react-number-format'
 
 const propTypes = {
     result: PropTypes.number,
+    label: PropTypes.string,
     prefix: PropTypes.string,
     isCurrencyFormat: PropTypes.bool
 }
@@ -11,10 +12,11 @@ const propTypes = {
 const Output = (props) => {
     return (
         <div style={{ width: 400, height: 100, fontFamily: 'Helvetica' }}>
+            <div>{props.label}</div>
             <NumericFormat 
                 displayType='text'
                 prefix={props.prefix}
-                thousandSeparator={props.currencyFormat}
+                thousandSeparator={props.isCurrencyFormat}
                 value={props.result}
             />
         </div>

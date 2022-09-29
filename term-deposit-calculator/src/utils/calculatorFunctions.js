@@ -1,3 +1,5 @@
+import { CompoundTypes } from "./enums"
+
 const convertToMonthsAndYears = (value) => {
     if (value / 12 < 1) {
         return value > 1 ? value + " months" : value + " month"
@@ -18,20 +20,25 @@ const calculateResult = (
     compound
 ) => {
     const rate = (interestRate / 100)
-    console.log("startDeposit: ", startDeposit)
-    console.log("interestRate: ", interestRate)
-    console.log("investmentTerm: ", investmentTerm)
-    console.log("compound: ", compound)
-    const result = startDeposit * 
-        Math.pow((rate / compound.rate), compound.rate * (investmentTerm / 12))
+    var compoundRate = compound.rate
+    if (compound.label == CompoundTypes.AT_MATURITY.label) {
+        compoundRate = 1 / (investmentTerm / 12)
+    }
     
-    console.log("HERE: ", result.toFixed(2))
-    return parseFloat(result.toFixed(2))
+    const result = startDeposit * 
+        Math.pow(1 + (rate / compoundRate), compoundRate * (investmentTerm / 12))
+    
+    return parseFloat(Math.ceil(result))
+}
+
+const calculateInterestEarned = (startDeposit, result) => {
+    return Math.abs(result - startDeposit)
 }
 
 const functions = {
     convertToMonthsAndYears,
-    calculateResult
+    calculateResult,
+    calculateInterestEarned
 }
 
 export default functions

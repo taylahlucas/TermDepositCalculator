@@ -17,7 +17,6 @@ export const CompoundTypes = {
     AT_MATURITY: {
         value: 3,
         label: 'At Maturity',
-        // TODO: Fix this value
         rate: 1
     }
 }

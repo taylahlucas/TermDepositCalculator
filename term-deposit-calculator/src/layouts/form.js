@@ -15,13 +15,14 @@ const inputStyles = {
 }
 
 const propTypes = {
-    getResult: PropTypes.func.isRequired
+    getResult: PropTypes.func.isRequired,
+    getInterestEarned: PropTypes.func.isRequired
 }
 
 const Form = (props) => {
     const [startDeposit, setStartDeposit] = useState(10000)
-    const [interestRate, setInterestRate] = useState(0.01)
-    const [investmentTerm, setInvestmentTerm] = useState(1)
+    const [interestRate, setInterestRate] = useState(1.10)
+    const [investmentTerm, setInvestmentTerm] = useState(36)
     const [compound, setCompound] = useState(CompoundTypes.MONTHLY)
 
     const [validDeposit, setValidDeposit] = useState(true)
@@ -55,7 +56,9 @@ const Form = (props) => {
             investmentTerm,
             compound
          )
+         const interestEarned = CalculatorFunctions.calculateInterestEarned(startDeposit, result)
          props.getResult(result)
+         props.getInterestEarned(interestEarned)
     }
 
     return (
