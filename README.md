@@ -19,6 +19,7 @@ npm start
 
 ## Running Tests
 
+npm test
 
 ## Packages
 
@@ -36,5 +37,5 @@ npm start
 /components - general resuable components
 /layouts - custom layouts
 /utils - utility files such as enums and functions
-/tests - unit tests for logic
+/tests - unit tests for calculator functions
 

@@ -15,10 +15,12 @@ const inputStyles = {
 }
 
 const propTypes = {
-    getResult: PropTypes.func.isRequired,
-    getInterestEarned: PropTypes.func.isRequired
+    getResult: PropTypes.func,
+    getInterestEarned: PropTypes.func
 }
 
+// The Form component handles all calculations and input components 
+// & will pass the result back to TermCalculator.
 const Form = (props) => {
     const [startDeposit, setStartDeposit] = useState(10000)
     const [interestRate, setInterestRate] = useState(1.10)
@@ -32,12 +34,12 @@ const Form = (props) => {
     const handleDeposit = (event) => {
         const deposit = event.target.value.replace(',', '')
         setStartDeposit(deposit)
-        setValidDeposit(deposit > 0 && deposit <= 500000000)
+        setValidDeposit(deposit > 0 && deposit <= 1000000)
     }
 
     const handleRate = (event) => {
         setInterestRate(event.target.value)
-        setValidRate(event.target.value >= 0.01 && event.target.value <= 15.0)
+        setValidRate(event.target.value >= 0.01 && event.target.value <= 5.0)
     }
 
     const handleTerm = (event) => {
@@ -68,7 +70,7 @@ const Form = (props) => {
                 style={inputStyles}
                 label="start deposit" 
                 error={!validDeposit}
-                helperText={validDeposit ? null : "Please enter a value between $10 and $500,000,000"}
+                helperText={validDeposit ? null : "Please enter a value between $10 and $1,000,000"}
                 InputProps={{
                     startAdornment: <InputAdornment position='start'>$</InputAdornment>
                 }}
@@ -81,7 +83,7 @@ const Form = (props) => {
                 style={inputStyles}
                 label="interest rate" 
                 error={!validRate}
-                helperText={validRate ? "" : "Please enter a percentage between 0% - 15%"}
+                helperText={validRate ? "" : "Please enter a percentage between 0% - 5%"}
                 InputLabelProps={{
                     shrink: true
                 }}
