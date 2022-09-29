@@ -10,7 +10,7 @@ It takes in the following inputs:
 
 The output will calculate the term deposit plus interest earned.
 
-## Setup
+# Setup
 
 From the main project directory, run the following commands:
 
@@ -21,18 +21,18 @@ From the main project directory, run the following commands:
 
 npm test
 
-## Packages
+# Packages
 
-# UI 
+## UI 
 - @mui/material
 - @emotion/react
 - @emotion/styled
 
-# Validation
+## Validation
 - @prop-types
 - @react-number-format
 
-## Folder Navigation
+# Folder Navigation
 
 - /components - general resuable components
 - /layouts - custom layouts
