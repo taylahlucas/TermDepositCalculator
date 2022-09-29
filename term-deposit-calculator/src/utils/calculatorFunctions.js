@@ -1,4 +1,4 @@
-import { CompoundTypes } from "./enums"
+import { CompoundTypes } from './enums'
 
 const convertToMonthsAndYears = (value) => {
     if (value / 12 < 1) {
@@ -21,7 +21,7 @@ const calculateResult = (
 ) => {
     const rate = (interestRate / 100)
     var compoundRate = compound.rate
-    if (compound.label == CompoundTypes.AT_MATURITY.label) {
+    if (compound.label === CompoundTypes.AT_MATURITY.label) {
         compoundRate = 1 / (investmentTerm / 12)
     }
     
