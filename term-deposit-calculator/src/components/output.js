@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { NumericFormat } from 'react-number-format'
 
 const propTypes = {
-    result: PropTypes.number,
-    label: PropTypes.string,
+    result: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
     prefix: PropTypes.string,
     isCurrencyFormat: PropTypes.bool
 }
@@ -15,7 +15,7 @@ const Output = (props) => {
             <div>{props.label}</div>
             <NumericFormat 
                 displayType='text'
-                prefix={props.prefix}
+                prefix={props.prefix ?? ""}
                 thousandSeparator={props.isCurrencyFormat}
                 value={props.result}
             />

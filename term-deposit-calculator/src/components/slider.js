@@ -4,7 +4,7 @@ import Slider from '@mui/material/Slider'
 import CalculatorFunctions from '../utils/calculatorFunctions'
 
 const propTypes = {
-    inputStyles: PropTypes.object,
+    inputStyles: PropTypes.object.isRequired,
     value: PropTypes.number.isRequired,
     isValid: PropTypes.bool.isRequired,
     onChange: PropTypes.func.isRequired

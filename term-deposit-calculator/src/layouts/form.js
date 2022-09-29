@@ -33,7 +33,7 @@ const Form = (props) => {
 
     const handleDeposit = (event) => {
         const deposit = event.target.value.replace(',', '')
-        setStartDeposit(deposit)
+        setStartDeposit(event.target.value)
         setValidDeposit(deposit > 0 && deposit <= 1000000)
     }
 
@@ -71,6 +71,9 @@ const Form = (props) => {
                 label="start deposit" 
                 error={!validDeposit}
                 helperText={validDeposit ? null : "Please enter a value between $10 and $1,000,000"}
+                inputProps={{ 
+                    maxLength: 9
+                }}
                 InputProps={{
                     startAdornment: <InputAdornment position='start'>$</InputAdornment>
                 }}
@@ -83,9 +86,13 @@ const Form = (props) => {
                 style={inputStyles}
                 label="interest rate" 
                 error={!validRate}
-                helperText={validRate ? "" : "Please enter a percentage between 0% - 5%"}
-                InputLabelProps={{
-                    shrink: true
+                
+                helperText={validRate ? null : "Please enter a percentage between 0% - 5%"}
+                inputProps={{ 
+                    maxLength: 5 
+                }}
+                InputLabelProps={{ 
+                    shrink: true 
                 }}
                 InputProps={{
                     endAdornment: <InputAdornment position='end'>% p.a</InputAdornment>
