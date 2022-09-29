@@ -9,13 +9,18 @@ const propTypes = {
     isCurrencyFormat: PropTypes.bool
 }
 
+const defaultValues = {
+    prefix: "",
+    isCurrencyFormat: false
+}
+
 const Output = (props) => {
     return (
         <div style={{ width: 400, height: 100, fontFamily: 'Helvetica' }}>
             <div>{props.label}</div>
             <NumericFormat 
                 displayType='text'
-                prefix={props.prefix ?? ""}
+                prefix={props.prefix}
                 thousandSeparator={props.isCurrencyFormat}
                 value={props.result}
             />
@@ -24,5 +29,6 @@ const Output = (props) => {
 }
 
 Output.propTypes = propTypes
+Output.defaultValues = defaultValues
 
 export default Output

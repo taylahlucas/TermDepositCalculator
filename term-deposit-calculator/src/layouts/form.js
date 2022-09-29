@@ -15,8 +15,8 @@ const inputStyles = {
 }
 
 const propTypes = {
-    getResult: PropTypes.func,
-    getInterestEarned: PropTypes.func
+    getResult: PropTypes.func.isRequired,
+    getInterestEarned: PropTypes.func.isRequired
 }
 
 // The Form component handles all calculations and input components 
