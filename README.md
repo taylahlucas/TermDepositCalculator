@@ -1,5 +1,5 @@
 # TermDepositCalculator-React
-A term deposit calculator build using React.
+A term deposit calculator built using React.
 
 The following application is a term deposit calculator.
 It takes in the following inputs:
@@ -14,8 +14,8 @@ The output will calculate the term deposit plus interest earned.
 
 From the main project directory, run the following commands:
 
-cd term-deposit-calculator
-npm start
+- cd term-deposit-calculator
+- npm start
 
 ## Running Tests
 
@@ -24,18 +24,18 @@ npm test
 ## Packages
 
 // UI
-@mui/material
-@emotion/react
-@emotion/styled
+- @mui/material
+- @emotion/react
+- @emotion/styled
 
 // Validation
-@prop-types
-@react-number-format
+- @prop-types
+-@react-number-format
 
 ## Folder Navigation
 
-/components - general resuable components
-/layouts - custom layouts
-/utils - utility files such as enums and functions
-/tests - unit tests for calculator functions
+- /components - general resuable components
+- /layouts - custom layouts
+- /utils - utility files such as enums and functions
+- /tests - unit tests for calculator functions
 
