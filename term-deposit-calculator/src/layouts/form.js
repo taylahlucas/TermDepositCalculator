@@ -58,9 +58,9 @@ const Form = (props) => {
             investmentTerm,
             compound
          )
-         const interestEarned = CalculatorFunctions.calculateInterestEarned(startDeposit, result)
-         props.getResult(result)
-         props.getInterestEarned(interestEarned)
+        const interestEarned = CalculatorFunctions.calculateInterestEarned(startDeposit, result)
+        props.getResult(result)
+        props.getInterestEarned(interestEarned)
     }
 
     return (

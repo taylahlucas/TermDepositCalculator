@@ -24,7 +24,7 @@ describe('calculateResult', () => {
         expect(CalculatorFunctions.calculateResult(3300, 1.10, 17, CompoundTypes.MONTHLY)).toBe(3352)
         expect(CalculatorFunctions.calculateResult(17700, 2.40, 26, CompoundTypes.QUARTERLY)).toBe(18642)
         expect(CalculatorFunctions.calculateResult(28100, 3.00, 42, CompoundTypes.ANNUALLY)).toBe(31163)
-        expect(CalculatorFunctions.calculateResult(610000, 5.00, 55, CompoundTypes.AT_MATURITY)).toBe(749792)
+        expect(CalculatorFunctions.calculateResult('610,000', 5.00, 55, CompoundTypes.AT_MATURITY)).toBe(749792)
     })
 })
 
@@ -32,6 +32,6 @@ describe('calculateInterestEarned', () => {
     test('calculates the correct interest earned', () => {
         expect(CalculatorFunctions.calculateInterestEarned(18300, 22494)).toBe(4194)
         expect(CalculatorFunctions.calculateInterestEarned(11200, 13767)).toBe(2567)
-        expect(CalculatorFunctions.calculateInterestEarned(310000, 381042)).toBe(71042)
+        expect(CalculatorFunctions.calculateInterestEarned('310,000', 381042)).toBe(71042)
     })
 })

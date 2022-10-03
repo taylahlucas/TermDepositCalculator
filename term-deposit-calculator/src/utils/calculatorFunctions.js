@@ -19,20 +19,21 @@ const calculateResult = (
     investmentTerm,
     compound
 ) => {
+    const deposit = startDeposit.toString().replace(',', '')
     const rate = (interestRate / 100)
     var compoundRate = compound.rate
     if (compound.label === CompoundTypes.AT_MATURITY.label) {
         compoundRate = 1 / (investmentTerm / 12)
     }
-    
-    const result = startDeposit * 
+    const result = deposit * 
         Math.pow(1 + (rate / compoundRate), compoundRate * (investmentTerm / 12))
-    
+
     return parseFloat(Math.ceil(result))
 }
 
 const calculateInterestEarned = (startDeposit, result) => {
-    return Math.abs(result - startDeposit)
+    const deposit = startDeposit.toString().replace(',', '')
+    return Math.abs(result - deposit)
 }
 
 const functions = {
