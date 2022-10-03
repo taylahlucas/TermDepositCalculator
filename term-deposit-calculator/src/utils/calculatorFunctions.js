@@ -13,13 +13,17 @@ const convertToMonthsAndYears = (value) => {
     }
 }
 
+const convertDeposit = (startDeposit) => {
+    return parseFloat(startDeposit.toString().replace(',', ''))
+}
+
 const calculateResult = (            
     startDeposit,
     interestRate,
     investmentTerm,
     compound
 ) => {
-    const deposit = parseFloat(startDeposit.toString().replace(',', ''))
+    const deposit = convertDeposit(startDeposit)
     const rate = (interestRate / 100)
     var compoundRate = compound.rate
     if (compound.label === CompoundTypes.AT_MATURITY.label) {
@@ -32,7 +36,7 @@ const calculateResult = (
 }
 
 const calculateInterestEarned = (startDeposit, result) => {
-    const deposit = parseFloat(startDeposit.toString().replace(',', ''))
+    const deposit = convertDeposit(startDeposit)
     return Math.abs(result - deposit)
 }
 

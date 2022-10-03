@@ -34,7 +34,7 @@ const Form = (props) => {
     const handleDeposit = (event) => {
         const deposit = event.target.value.replace(',', '')
         setStartDeposit(event.target.value)
-        setValidDeposit(deposit > 0 && deposit <= 1000000)
+        setValidDeposit(deposit > 0 && deposit < 1000000)
     }
 
     const handleRate = (event) => {
