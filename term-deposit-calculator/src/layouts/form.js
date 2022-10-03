@@ -32,9 +32,9 @@ const Form = (props) => {
     const [validTerm, setValidTerm] = useState(true)
 
     const handleDeposit = (event) => {
-        const deposit = event.target.value.replace(',', '')
+        const deposit = event.target.value.replaceAll(',', '')
         setStartDeposit(event.target.value)
-        setValidDeposit(deposit > 0 && deposit < 1000000)
+        setValidDeposit(deposit >= 10 && deposit <= 1000000)
     }
 
     const handleRate = (event) => {

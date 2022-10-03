@@ -14,7 +14,7 @@ const convertToMonthsAndYears = (value) => {
 }
 
 const convertDeposit = (startDeposit) => {
-    return parseFloat(startDeposit.toString().replace(',', ''))
+    return parseFloat(startDeposit.toString().replaceAll(',', ''))
 }
 
 const calculateResult = (            
