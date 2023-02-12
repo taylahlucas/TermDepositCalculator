@@ -1,5 +1,5 @@
 # TermDepositCalculator-React
-A term deposit calculator built using React v18.2.0.
+A term deposit calculator built using React v18.2.0 and JavaScript.
 
 The following application is a term deposit calculator.
 It takes in the following inputs:
