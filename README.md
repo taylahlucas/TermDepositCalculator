@@ -12,6 +12,8 @@ It takes in the following inputs:
 
 The output will calculate the term deposit plus interest earned.
 
+https://github.com/taylahlucas/TermDepositCalculator-React/assets/53559103/bbdae34c-fcc6-4265-839d-66b2f99c0a96
+
 # Setup
 
 From the main project directory, run the following commands:
