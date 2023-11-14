@@ -8,7 +8,7 @@ function TermCalculator() {
 
   return (
     <div style={{  width: 400, flex: 1, textAlign: 'center' }}>
-      <Form 
+      <Form
         getResult={(value) => setResult(value)} 
         getInterestEarned={(value) => setInterestEarned(value)} 
       />
