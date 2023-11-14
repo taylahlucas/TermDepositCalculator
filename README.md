@@ -1,5 +1,6 @@
 # TermDepositCalculator-React
-Date: 29th September 2022
+#### 29th September 2022
+
 A term deposit calculator built using React v18.2.0 and JavaScript.
 
 The following application is a term deposit calculator.
